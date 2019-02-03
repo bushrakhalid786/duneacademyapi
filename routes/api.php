@@ -21,7 +21,7 @@ Route::middleware('jwt.auth')->get('users', function () {
     return auth('api')->user();
 });
 
-Route::post('/register-user', 'Api\ApiLoginController@register');
+Route::post('/register-user', 'Api\ApiLoginController@register')->middleware('cors');
 
 Route::post('/login', 'Api\ApiLoginController@login');
 Route::post('/logout', 'Api\ApiLoginController@logout');
