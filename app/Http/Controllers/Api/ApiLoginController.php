@@ -51,9 +51,9 @@ class ApiLoginController extends Controller
      	]);
 
     	if($user) {
-    		return response()->json(['data' => $user, 'message' => 'Account created Successfully'], 200)->header('Access-Control-Allow-Origin', '*')->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    		return response()->json(['data' => $user, 'message' => 'Account created Successfully'], 200);
     	}
-    	return response()->json(['error' => 'Bad Request', 'message' => 'Account creation Failed'], 400)->header('Access-Control-Allow-Origin', '*')->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    	return response()->json(['error' => 'Bad Request', 'message' => 'Account creation Failed'], 400);
         
         
     }
