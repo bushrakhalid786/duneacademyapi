@@ -51,9 +51,11 @@ class ApiLoginController extends Controller
      	]);
 
     	if($user) {
-    		return response()->json(['data' => $user, 'message' => 'Account created Successfully'], 200);
+    		//return response()->json(['data' => $user, 'message' => 'Account created Successfully'], 200);
+    		return $user;
     	}
-    	return response()->json(['error' => 'Bad Request', 'message' => 'Account creation Failed'], 400);
+    	//return response()->json(['error' => 'Bad Request', 'message' => 'Account creation Failed'], 400);
+    	return null;
         
         
     }
